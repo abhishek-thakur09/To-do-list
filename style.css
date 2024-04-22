@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGFya3xlbnwwfHwwfHx8MA%3D%3D");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    color: white;
+}
+
+#main{
+    width: 100%;
+    max-width:350px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: rgba(91, 90, 90, 0.429);
+    backdrop-filter: saturate(140%) blur(4px);
+}
+
+#top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    user-select: none;                 
+    /* position: relative; */
+}
+
+.ri-draft-line{
+    font-size: 1.5rem;
+}
+
+#search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline-offset: 5px;
+    margin-bottom: 20px;
+}
+
+
+#search-input{
+    position: relative;
+    flex: 1;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+}
+
+#btn{
+    position: absolute;
+    right: 6%;
+    border: none;
+    background-color: rgb(203, 77, 203);
+    padding: 12px 10px;
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+#btn:hover{
+    background-color: rgb(139, 48, 139);
+}
+#btn:active{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
+/* _________________List-container_________________ */
+
+ul li{
+    margin-bottom: 10px;
+    list-style: none;
+    padding: 10px 35px 10px;
+    font-size: 17px;
+    text-align: left;
+    letter-spacing: 2px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    border: 1px solid white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: url(https://icons.veryicon.com/png/o/miscellaneous/wens/uncheck.png);
+    background-size: cover;
+    position: center;
+    background-color: white;
+    color: white;
+    left: 8px;
+    top: 10px;
+}
+
+ul li.checked{
+    background-color: rgb(184, 83, 184);
+    border-radius: 50px;
+    transform: scale(1);
+}
+
+ul li.checked::before{
+    background: rgb(181, 179, 179);
+}
+
+ul li.checked:hover{
+    transform: scale(1.05);
+}
+
+ul li span{
+    position: absolute;
+    color: #000;
+    right: 0;
+    top: 5px;
+    margin-right: 5px;
+    font-weight: 800;
+    width: 30px;
+    height: 30px;
+    font-size: 2rem;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    color: #f7f1f1;
+    /* background-color: white; */
+}
