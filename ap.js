@@ -22,6 +22,9 @@ function addtask(){
         list.appendChild(task);
         task.appendChild(span);
         input.value = '';
+
+
+         savedata();
     }
 }
 
